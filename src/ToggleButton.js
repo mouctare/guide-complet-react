@@ -4,10 +4,12 @@ class ToggleButton extends React.Component  {
     constructor(props) {
         super(props);
         this.state = {isToggleOn: true};
+       // this.handClick = this.handClick.bind(this);
     }
 
-    handClick(e) {
-        e.preventDefault();
+    handClick = (value, e) => {
+        console.log(e);
+        
         this.setState(state => {
             return {isToggleOn: state.isToggleOn ? false : true};
         }) 
@@ -16,10 +18,10 @@ class ToggleButton extends React.Component  {
         return (
             <div>
                 <button 
-                onClick={() =>alert('hello')}>
-                Hello
+                onClick={() => this.handClick('some value')}>
+                {this.state.isToggleOn?'ON': 'OFF'}
               </button>
-              <a href="#page" onClick={this.handClick}>Page</a>
+            
             </div>
     
         );
