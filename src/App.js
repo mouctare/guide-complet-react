@@ -1,17 +1,13 @@
 
 import './App.css';
-import Clock from './Clock';
-import Greeting from './Greeting';
-import  ToggleButton  from './ToggleButton';
-import Welcome from './Welcome';
+import LoginControl from './LoginControl';
+
 
 function App() {
  return(
    <div>
-   <Welcome message="Bonjour"/>
-   <Clock date={new Date()}/>
-   <ToggleButton/>
-   <Greeting/>
+  
+   <LoginControl hasNewMessage={true} credit={100} hansWarning={true}/>
    </div>
  )
  
