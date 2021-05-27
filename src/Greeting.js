@@ -1,0 +1,15 @@
+import GuestGreeting from "./GuestGreeting";
+import UserGreeting from "./UserGreeting";
+
+import React from 'react'
+
+const Greeting = (props) => {
+    if(props.isLoggedIn) {
+        return <UserGreeting/>;
+    }else {
+        return <GuestGreeting/>;
+    }
+  
+}
+
+export default Greeting
